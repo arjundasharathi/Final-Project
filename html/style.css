@@ -1,0 +1,67 @@
+.navbar-custom {
+  background-color: transparent;
+}
+
+/* set map, body, and html to 100% of the screen size */
+#map {
+  height: 80%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto 
+}
+
+#plot, #plot2 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto 
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow-x:hidden;	
+}
+
+.list-group-item {
+  background-color:transparent;
+}
+
+.btn-default {
+  background-color:transparent;
+  color:black;
+}
+
+.jumbotron {
+  height: 20%
+}
+
+.nav-item {
+  color: Black;
+}
+
+.titlecustom {
+  color: black;
+  font-family: "lato", sans-serif;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.jumbotron {
+    background-color: transparent;
+    color: black;
+}
+
+.jumbotron-title {
+    font-family: "lato", sans-serif;
+    letter-spacing: 5px;
+}
+
+.jumbotron-p {
+    font-family: "lato", sans-serif;
+}
+
+.panel-heading{
+    font-family: "lato", sans-serif;
+    text-align: center;
+    font-weight: bold;
+}

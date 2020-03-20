@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+		<title>Arjun and Ekamjit Final Project</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+		<style>
+            #container {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                z-index: -1;
+            }
+		</style>
+
+		  <!-- Leaflet CSS & JS -->
+		  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+		  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+		  crossorigin=""/>
+		  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+		  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+		  crossorigin=""></script>
+		
+		  <!--D3 cdn-->
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+		
+		  <!-- Our CSS -->
+		  <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+
+		<nav class="navbar navbar-expand-lg navbar-dark navbar-custom ">
+			<a class="titlecustom" href="index.html"><strong>Dashboard</strong></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" style="color:Black; font-family:sans-serif;" href="sample.json">Raw Data</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="col-md-12 jumbotron text-center">
+			<h1 class="jumbotron-title" >Toronto Real Estate Listings Cost Analysis</h1>
+			<p class="jumbotron-p">The below visualizations display cost trends of real estate listings based off of their square footage, number of bedrooms, lot size, and maybe distance from the downtown core. </p>
+		</div>
+
+		<!-- For some reason Plotly needs a new version of D3-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+		<script src="static/js/lineplots.js"></script>
+		<script src="static/js/lineplots2.js"></script>
+		<div id="plot"></div>
+		<div id="plot2"></div>
+		<div class="panel panel-default">
+		<div class="panel-heading">Machine Learning Prediction of House Price in Surrey (Enter Details Below)</div>
+			<div class="panel-body">
+				<br>
+	  			<form>
+					<div class="row">
+						<div class="col">
+							<input type="text" id="bedroom-control" placeholder="# Bedrooms">
+						</div>
+						<div class="col">
+							<input type="text" id="bathroom-control" placeholder="# Bathrooms">
+						</div>
+						<div class="col">
+							<input type="text" id="sqft-control" placeholder="Sq. ft.">
+						</div>
+					</div>
+					<button id="filter-btn" style="margin-left: 50%" type="button" class="btn btn-default">Print Prediction</button>
+				</form>
+			</div>
+		  </div>
+		  <div id="table-area" class="">
+            <table id="print-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head" style="margin-left: 50%">Prediction:</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+		<div id="container"></div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+		<script src="static/js/app.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    </body>
+</html>
